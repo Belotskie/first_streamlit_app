@@ -43,4 +43,5 @@ my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.write("Row Indices:", my_data_rows)
-streamlit.dataframe(my_data_rows.index) 
+streamlit.dataframe(my_data_rows) 
+df['Row Number'] = df.index + 1  # Adding 1 to start numbering from 1
