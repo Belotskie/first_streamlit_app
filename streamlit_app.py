@@ -39,9 +39,8 @@ import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
+my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
-streamlit.write("Row Indices:", my_data_rows)
-my_data_rows['Row Number'] = my_data_rows.index + 1  # Adding 1 to start numbering from 1
-streamlit.dataframe(my_data_rows) 
+#streamlit.write("Row Indices:", my_data_rows)
+streamlit.dataframe(my_data_row) 
